@@ -1,0 +1,14 @@
+<!--pages/eb/eb.wxml-->
+<text>pages/eb/eb.wxml</text>
+<view class ="container">
+  <view class = "button">
+    <button bindtap="toTransfer"> 
+      toTransfer
+    </button>
+  </view>
+  <view class = "button">
+    <button bindtap="toBuy">
+      toBuy
+    </button>
+  </view>
+</view>

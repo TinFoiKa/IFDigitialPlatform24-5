@@ -1,0 +1,71 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/home",
+    "pages/my/my",
+    "pages/my/bracelets/bracelets",
+    "pages/my/eb_h/eb_h",
+    "pages/my/gambling_h/gambling_h",
+    "pages/eb/eb",
+    "pages/gambling/gambling",
+    "pages/activities/food/food",
+    "pages/activities/hs/hs",
+    "pages/activities/activities",
+    "pages/activities/main_perf/main_perf",
+    "pages/activities/hill_perf/hill_perf",
+    "pages/activities/vendors/vendors",
+    "pages/activities/sponsors/sponsors",
+    "pages/activities/student_market/student_market",
+    "pages/eb/transfer/transfer",
+    "pages/eb/buy/buy",
+    "pages/home/feedback/feedback",
+    "pages/home/feedback/feedback_sent/feedback_sent"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents",
+  "tabBar": {
+    "color": "#A2A9B0",
+    "selectedColor": "#07C160",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "Home",
+        "iconPath": "images/icons/home.png",
+        "selectedIconPath": "images/icons/home-active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "My",
+        "iconPath": "images/icons/home.png",
+        "selectedIconPath": "images/icons/home-active.png"
+      },
+      {
+        "pagePath": "pages/eb/eb",
+        "text": "Eb",
+        "iconPath": "images/icons/home.png",
+        "selectedIconPath": "images/icons/home-active.png"
+      },
+      {
+        "pagePath": "pages/gambling/gambling",
+        "text": "Lucky draw",
+        "iconPath": "images/icons/home.png",
+        "selectedIconPath": "images/icons/home-active.png"
+      },
+      {
+        "pagePath": "pages/activities/activities",
+        "text": "Activities",
+        "iconPath": "images/icons/home.png",
+        "selectedIconPath": "images/icons/home-active.png"
+      }
+    ]
+  }
+}

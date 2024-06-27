@@ -1,0 +1,9 @@
+<!--pages/home/feedback/feedback_sent/feedback_sent.wxml-->
+<text>pages/home/feedback/feedback_sent/feedback_sent.wxml</text>
+<view class = "container">
+
+  <button bindtap = "goback">
+    Back
+  </button>
+
+</view>

@@ -1,0 +1,17 @@
+<!--pages/index/index.wxml-->
+<text>pages/index/index.wxml</text>
+<view class = "container">
+
+    <view class = "toHome">
+        <button type="primary" bindtap="toHome">
+            Debug: toHome
+        </button>
+
+        <button type = "primary" bindtap="registeration">
+            
+            Register [todo!]
+        </button>
+    </view>
+
+
+</view>

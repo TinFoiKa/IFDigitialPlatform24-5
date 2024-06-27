@@ -1,0 +1,11 @@
+<!--pages/home/feedback/feedback.wxml-->
+<text>pages/home/feedback/feedback.wxml</text>
+<view class = "container">
+
+  <view class = "feedback_box">
+    <button bindtap = "sendFeedback">
+      Send
+    </button>
+  </view>
+
+</view>

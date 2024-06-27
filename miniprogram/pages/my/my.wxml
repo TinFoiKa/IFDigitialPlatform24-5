@@ -1,0 +1,22 @@
+<!--pages/my/my.wxml-->
+<text>pages/my/my.wxml</text>
+<view class = "container"> 
+
+  <view class = "button">
+    <button bindtap="toEb_h">
+      toEb_h
+    </button>
+  </view>
+  <view class = "button">
+    <button bindtap="toBracelets">
+      toBracelets
+    </button>
+  </view>
+  <view class = "button">
+    <button bindtap="toGambling_h">
+      toGambling_h
+    </button>
+  </view>
+
+
+</view>

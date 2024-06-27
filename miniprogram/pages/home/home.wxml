@@ -1,0 +1,8 @@
+<!--pages/home/home.wxml-->
+<text>pages/home/home.wxml</text>
+<floating_button> </floating_button>
+<view class = "container">
+  <view class = "feedback">
+    <button bindtap = "toFeedback"> toFeedback </button>
+  </view>
+</view>

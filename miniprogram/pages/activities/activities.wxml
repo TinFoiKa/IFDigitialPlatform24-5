@@ -1,0 +1,50 @@
+<!--pages/activities/activities.wxml-->
+<text>pages/activities/activities.wxml</text>
+<view class = "container">
+    <view id = "toHs">
+        <!--there will be a "window" here with short description of booths-->
+        <view id = "Hs">
+            <button bindtap="goto" mark:location = "hs">
+                toHsbooths
+            </button>
+        </view>
+
+        <view id = "Food">
+            <button bindtap="goto" mark:location = "food">
+                toFoodBooths
+            </button>
+        </view>
+
+        <view id = "HillPerf">
+            <button bindtap = "goto" mark:location = "hill_perf"> 
+                Hillside performances
+            </button>
+        </view>
+
+        <view id = "MainPerf"> 
+            <button bindtap = "goto" mark:location = "main_perf">
+                toMainPerf
+            </button>
+        </view>
+
+        <view id = "StudentMarket">
+            <button bindtap = "goto" mark:location = "student_market">
+                toStudentMarket
+            </button>
+        </view>
+        
+        <view id = "Vendors">
+            <button mark:location = "vendors" bindtap = "goto">
+                toVendors
+            </button>
+        </view>
+        
+        <view id = "Sponsors">
+            <button mark:location = "sponsors" bindtap = "goto">
+                toSponsors
+            </button>
+        </view>    
+    </view>
+
+
+</view>
