@@ -19,7 +19,8 @@
     "pages/eb/transfer/transfer",
     "pages/eb/buy/buy",
     "pages/home/feedback/feedback",
-    "pages/home/feedback/feedback_sent/feedback_sent"
+    "pages/home/feedback/feedback_sent/feedback_sent",
+    "pages/admissions/admissions"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

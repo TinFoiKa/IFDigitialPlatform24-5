@@ -1,8 +1,85 @@
 <!--pages/home/home.wxml-->
 <text>pages/home/home.wxml</text>
 <floating_button> </floating_button>
+<!--pages/landing/landing.wxml-->
+<text>pages/landing/landing.wxml</text>
 <view class = "container">
-  <view class = "feedback">
-    <button bindtap = "toFeedback"> toFeedback </button>
-  </view>
+    <view class = "gotoeas">
+        <button bindtap = "GoToEas">
+            GO TO EAS
+        </button>
+    </view>
+
+    <view class = "title">
+        <text>International Fair 2023</text>
+
+    </view>
+    <!-- Announcements -->
+    <view class = "announcements">  
+
+            <!-- Announcement Pinned -->
+        <scroll-view scroll-y = "true" class = "pinned">
+            <text> [{{pinned.publish_time}}] </text>
+            <text> {{pinned.text}} </text>
+        </scroll-view>
+
+            <!-- Accouncement Recent -->
+        <view class = "recent_container">
+
+        <scroll-view scroll-y = "true" class = "recent" bindscrolltolower="OnReachBottom">
+            <block wx:for="{{loaded_recent}}" wx:key="_id" wx:for-index="i">
+                <view class = "singular_announcement" data-index = "{{i}}" data-nam="{{item.id}}">
+
+                        <view class = "bruv_time"> <text> [{{item.publish_time}}] </text> </view>
+                        <view class = "bruv_text"> <text> {{item.text}} </text> </view>
+                </view>
+            </block>
+        </scroll-view>
+        
+        </view>
+        
+
+    </view>
+
+
+    <!--Map-->
+    <view class = "media">
+        media
+        <image src=""></image>
+    </view>
+
+    <!--IF Introductions-->
+    <view class = "introductions">
+
+    </view>
+
+    <!--Media-->
+    <view class = "map">
+        map
+            <!--media-->
+            
+    
+    
+    </view>
+
+
+    <!--feedback button-->
+    
+    <view class = "feedback">
+        <button bindtap = "GoToFeedback" type = "primary" id = "feedback_button"> 
+            <text> Feedback Box </text> 
+    </button>
+    </view>
+
+
+
+
+    <!--Credits-->
+    <view class = "credits">
+        <!--Probably markdown text-->
+        <text>{{credits}}</text>
+        
+        <!--<rich-text nodes = "{{credits}}"></rich-text>-->
+    </view>
+
 </view>
