@@ -5,7 +5,15 @@ Page({
    * Page initial data
    */
   data: {
+    items: [
+      { name: '0', value: 'standard is dealt for u.' },
+      { name: '1', value: 'standard is dealicient for u.'},
+      { name: '2', value: 'standard is for u', checked: 'true'},
+    ],
+  },
 
+  checkboxChange(data){
+    console.log(data)
   },
 
   /**
@@ -63,4 +71,6 @@ Page({
   onShareAppMessage() {
 
   }
+
+
 })

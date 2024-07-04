@@ -1,8 +1,6 @@
 <!--pages/home/home.wxml-->
 <text>pages/home/home.wxml</text>
 <floating_button> </floating_button>
-<!--pages/landing/landing.wxml-->
-<text>pages/landing/landing.wxml</text>
 <view class = "container">
     <view class = "gotoeas">
         <button bindtap = "GoToEas">

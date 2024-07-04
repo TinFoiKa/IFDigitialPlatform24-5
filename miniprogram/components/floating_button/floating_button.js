@@ -20,7 +20,11 @@ Component({
   methods: {
 
   },
-  add(e){
+
+  add: function(e){
     console.log(e);
+    wx.navigateTo({
+      url: 'pages/admissions/admissions',
+    })
   }
 })
