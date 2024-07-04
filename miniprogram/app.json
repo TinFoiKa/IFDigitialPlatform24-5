@@ -20,7 +20,9 @@
     "pages/eb/buy/buy",
     "pages/home/feedback/feedback",
     "pages/home/feedback/feedback_sent/feedback_sent",
-    "pages/admissions/admissions"
+    "pages/admissions/admissions",
+    "pages/booth_manager/booth_manager",
+    "pages/event_admin/event_admin"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
