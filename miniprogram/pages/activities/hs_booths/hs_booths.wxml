@@ -1,5 +1,11 @@
-<!DOCTYPE html>
 
 <view>
+    <view class = "inputBar"> 
+        <input type = "text" placeholder = "search" bindinput = "updateList" bind:selectionchange="updateList">  
+        <button> display toggle </button> <!-- either panel or box -->
+    </view>
     
+    <view class = "imbeddedList" wx:for = "{{boothList}}">
+        <booth-item wx:if = "{{show}}" display = "panel" searchterm = "{{item.booth_name}}" boothdata  = "{{item}}"> </booth-item>
+    </view>
 </view>

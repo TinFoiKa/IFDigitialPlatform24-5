@@ -1,4 +1,6 @@
 {
-	"usingComponents": {},
+	"usingComponents": {
+		"booth-item" : "/components/booth_item/booth_item"
+	},
 	"navigationBarTitleText": "title"
 }
