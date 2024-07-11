@@ -1,0 +1,14 @@
+<template name = "panel" class = "panel"> 
+    <view class = "bounding">
+        <image class = "large"> </image>
+    </view>
+</template>
+
+<template name = "box" class = "box">
+    <view class = "bounding" bindtap = "">
+        <image class = "small"> </image>
+
+    </view>
+</template>
+
+<template is = "{{display}}">
