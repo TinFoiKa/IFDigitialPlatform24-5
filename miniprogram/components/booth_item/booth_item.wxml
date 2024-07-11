@@ -11,4 +11,4 @@
     </view>
 </template>
 
-<template is = "{{display}}">
+<template is = "{{display}}"> </template>
