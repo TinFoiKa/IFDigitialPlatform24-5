@@ -1,3 +1,5 @@
+
+
 // pages/admissions/admissions.js
 Page({
 
@@ -5,15 +7,17 @@ Page({
    * Page initial data
    */
   data: {
+    last_selected: 0,
     items: [
-      { name: '0', value: 'standard is dealt for u.' },
+      { name: '0', value: 'standard is dealt for u.', checked: 'true'},
       { name: '1', value: 'standard is dealicient for u.'},
-      { name: '2', value: 'standard is for u', checked: 'true'},
+      { name: '2', value: 'standard is for u'},
+      { name: '3', value: 'option 4'},
     ],
   },
 
-  checkboxChange(data){
-    console.log(data)
+  checkboxChange(a){
+
   },
 
   /**
@@ -70,6 +74,12 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+
+  toSasChina(){
+    wx.reLaunch({
+      url: 'https://www.saschina.org/',
+    })
   }
 
 
