@@ -10,47 +10,4 @@
     </view>
 </view>
 
-<draggable-sheet
-  class="sheet"
-  style="height: {{sheetHeight}}px;"
-  initial-child-size="{{initialSize}}"
-  min-child-size="{{minSize}}"
-  max-child-size="{{maxSize}}"
-  snap= true
-  snap-sizes="{{[0.5]}}"
-  >
-    <scroll-view
-    associative-container="draggable-sheet"
-    class= "scrollable"
-    bounces= false
-    scroll-y
-    type="custom"
-    show-scrollbar= false
-    >
-      <sticky-section>
-        <sticky-header>
-          <view class="bar">
-            <view class="indicator" />
-          </view>
-        </sticky-header>
-        <list-view>
-          <block wx:for="{{list}}" wx:key="id">
-            <view class="section">
-              <view class="card">
-                <image class="card-img" src="{{item.img}}" mode="aspectFill" />
-                <view class="card-intro">
-                  <view class="intro-left">
-                    <text class="name-1">{{ item.title }}</text>
-                    <text class="name-2">{{ item.desc }}</text>
-                  </view>
-                  <view class="intro-right">
-                    <text class="money">¥ 80</text>
-                  </view>
-                </view>
-              </view>
-            </view>
-          </block>
-        </list-view>
-      </sticky-section>
-    </scroll-view>
-  </draggable-sheet>
+
