@@ -1,15 +1,22 @@
+const { windowHeight } = wx.getSystemInfoSync()
+const menuRect = wx.getMenuButtonBoundingClientRect()
+const menuBottom = menuRect.bottom + 1
 
 Page({
   /**
    * 页面的初始数据
    */
   data: {
-    boothList: <></>
-
+   // boothList: <></>
+    sheetHeight: windowHeight - menuBottom,
+    initialSize: 0,
+    minSize: 0,
+    maxSize: 1,
+    list: ["wow", "wow2", "wow3"]
   },
 
-
-  getHsBoothList: function() {
+  
+  /*getHsBoothList: function() {
     let that = this
     wx.cloud.callFunction({
       name: "executeSql",
@@ -22,8 +29,9 @@ Page({
           boothList : this.data
         })
       }
+
     })
-  },
+  },*/
 
   updateList : function (){
     
@@ -33,6 +41,16 @@ Page({
    */
   onLoad: function(options) {
     getHsBoothList()
+    this.createSelectorQuery().select('.sheet').node().exec(res => {
+      // 使用 sheetContext 控制 draggable-sheet 组件的滚动
+      const sheetContext = res[0].node
+      sheetContext.scrollTo({
+        size: 0.7,
+        animated: true,
+        duration: 300,
+        easingFunction: 'ease'
+      })
+    });
   },
 
   /**

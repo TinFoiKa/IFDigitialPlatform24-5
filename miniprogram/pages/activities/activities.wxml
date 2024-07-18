@@ -1,10 +1,11 @@
 <!--pages/activities/activities.wxml-->
 <text>pages/activities/activities.wxml</text>
+
 <view class = "container">
     <view id = "toHs">
         <!--there will be a "window" here with short description of booths-->
         <view id = "Hs">
-            <button bindtap="goto" mark:location = "hs">
+            <button bindtap="goto" mark:location = "hs_booths">
                 toHsbooths
             </button>
         </view>
@@ -45,6 +46,5 @@
             </button>
         </view>    
     </view>
-
 
 </view>

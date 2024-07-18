@@ -1,7 +1,7 @@
 
-<view>
+<view class = "container">
     <view class = "inputBar"> 
-        <input type = "text" placeholder = "search" bindinput = "updateList" bind:selectionchange="updateList">  
+        <input type = "text" placeholder = "search" bindinput = "updateList" bind:selectionchange="updateList" />
         <button> display toggle </button> <!-- either panel or box -->
     </view>
     
@@ -9,3 +9,5 @@
         <booth-item wx:if = "{{show}}" display = "panel" searchterm = "{{item.booth_name}}" boothdata  = "{{item}}"> </booth-item>
     </view>
 </view>
+
+

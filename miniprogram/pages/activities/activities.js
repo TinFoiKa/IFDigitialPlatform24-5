@@ -105,8 +105,8 @@ Page({
   goto : function(e){
     let wohin = e.mark.location;
     wx.navigateTo({
-        url: wohin + '/' + wohin,
-      })
+      url: wohin + '/' + wohin,
+    })
   }
   //'pages/activites/'+wohin+'/'+wohin
 })

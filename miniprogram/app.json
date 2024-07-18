@@ -9,7 +9,7 @@
     "pages/eb/eb",
     "pages/gambling/gambling",
     "pages/activities/food/food",
-    "pages/activities/hs/hs",
+    "pages/activities/hs_booths/hs_booths",
     "pages/activities/activities",
     "pages/activities/main_perf/main_perf",
     "pages/activities/hill_perf/hill_perf",
@@ -34,6 +34,7 @@
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2",
+  
   "lazyCodeLoading": "requiredComponents",
   "tabBar": {
     "color": "#A2A9B0",
