@@ -13,6 +13,8 @@ $RECYCLE.BIN/
 # Node.js
 node_modules/
 
+# cloudFunctions
+cloudfunctions/
 
 Testing.session.sql
 .vscode/settings.json
