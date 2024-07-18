@@ -4,10 +4,29 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    braceletData: {}
   },
 
-  complementaryActivate: function() {
+  complementaryActivate: function(amount) {
+    const status = this.findActivityStatus()
+    if (!status) {
+      return
+    }
+
+    wx.scanCode({
+      success: function(res){
+        wx.cloud.callFunction({
+          name: "callSQL",
+          data: {string: "UPDATE Bracelets SET is_active = 1, complementary_amount = "+ amount + " WHERE qr_link = " + res},
+          success: function(){
+            wx.showToast("Bracelet Linked!")
+          },
+          fail: function(err){
+            console.log(err)
+          }
+        })
+      }
+    })
     
   },
 

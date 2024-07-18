@@ -1,2 +1,7 @@
+<!--event admin page(s)-->
 
-
+<view>
+  <button bindtap = "complementaryActivate">
+    
+  </button>
+</view>

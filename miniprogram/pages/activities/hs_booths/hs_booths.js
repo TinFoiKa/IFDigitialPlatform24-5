@@ -7,14 +7,41 @@ Page({
    * 页面的初始数据
    */
   data: {
-   // boothList: <></>
-    sheetHeight: windowHeight - menuBottom,
-    initialSize: 0,
-    minSize: 0,
-    maxSize: 1,
-    list: ["wow", "wow2", "wow3"]
+    braceletData: {}
   },
 
+  findActivityStatus(){
+		let result = true
+		if(this.data.activityStatus == 0){
+			//管理员未开启活动
+			wx.showModal({
+				title : "Alert",
+				content : "Activity not enabled",//活动未开启
+				showCancel : false,
+				confirmText : "Ok",
+			})
+			result = false
+		}else if(this.data.activityStatus == 3){
+			//活动已开启，已到活动结束时间
+			wx.showModal({
+				title : "Alert",
+				content : "Activity has ended",//活动已结束
+				showCancel : false,
+				confirmText : "Ok",
+			})
+			result = false
+		}else if(this.data.activityStatus == 4){
+			//活动已手动结束
+			wx.showModal({
+				title : "Alert",
+				content : "Activity terminated",//活动已终止
+				showCancel : false,
+				confirmText : "Ok",
+			})
+			result = false
+		}
+		return result
+	},
   
   /*getHsBoothList: function() {
     let that = this
@@ -35,6 +62,47 @@ Page({
 
   updateList : function (){
     
+  },
+
+  scanCode: function(){
+    const status = this.findActivityStatus()
+    if (!status) {
+      return
+    }
+
+    let outscope = this
+    wx.scanCode({
+      onlyFromCamera: true,
+      success: function(res){
+        wx.cloud.callFunction({
+          name: "callSQL",
+          data: {string: "select * from Bracelets where qr_link = " + res},
+          success: function(res) {
+            outscope.setData({braceletData: res})
+          },
+          fail: function(err){
+            console.log(err)
+          }
+        })
+
+      },
+      fail: function(){
+        console.log(err)
+      }
+    })
+
+    if (this.data(braceletData.bl_ID) >= 900) {
+      // handle complementary bracelet indices
+      wx.cloud.callFunction({
+        name: "callSQL",
+        data: ""
+      })
+      // set to activate
+      // add complementary money to booths
+
+    } else {
+      // normal handle
+    }
   },
   /**
    * 生命周期函数--监听页面加载
