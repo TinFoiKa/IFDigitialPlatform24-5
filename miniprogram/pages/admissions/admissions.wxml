@@ -3,12 +3,17 @@
 
   <page-meta root-font-size="system"/>
 <view class="page" data-weui-theme="{{theme}}" data-weui-mode="{{mode}}">
+
+	<view class = "title"> title </view>
 	<view class = "toSaschina">
 		<button bindtap = "toSasChina" id = "redirectToSasChina"> 
 			saschina.org
-		</button>>
-
+		</button>
 	</view>
+	<view class = "admission">
+		asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf
+	</view>
+	
 	<view class="weui-form">
 		<view class="weui-form__text-area">
 			<h2 class="weui-form__title">Admissions quiz</h2>
@@ -33,7 +38,6 @@
                         </label>
                     </radio-group>
 					<navigator class="weui-cell weui-cell_active weui-cell_link" hover-class="weui-cell_active">
-						<view class="weui-cell__bd">添加更多</view>
 					</navigator>
 				</view>
 			</view>
@@ -42,9 +46,6 @@
 			<view aria-role="button" class="weui-btn weui-btn_primary">下一步</view>
 		</view>
 		<view class="weui-form__tips-area">
-			<view class="weui-form__tips">
-        <text aria-role="option" aria-labelledby="js_tips_txt js_tips_link" id="js_tips_txt">点击下一步即表示</text><navigator id="js_tips_link" url="javascript:">同意用户协议</navigator>
-			</view>
 		</view>
 	</view>
 </view>
