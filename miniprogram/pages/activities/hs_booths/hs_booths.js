@@ -48,7 +48,7 @@ Page({
     wx.cloud.callFunction({
       name: "executeSql",
       data: {
-        sql: "select * from BoothData where booth_type = 2"
+        string: "select * from BoothData where booth_type = 2"
       },  
       success : function(res) {
         wx.hideLoading();
@@ -64,7 +64,7 @@ Page({
     
   },
 
-  scanCode: function(){
+  scanToDeduct: function(amount){
     const status = this.findActivityStatus()
     if (!status) {
       return
@@ -75,7 +75,7 @@ Page({
       onlyFromCamera: true,
       success: function(res){
         wx.cloud.callFunction({
-          name: "callSQL",
+          name: "executeSql",
           data: {string: "select * from Bracelets where qr_link = " + res},
           success: function(res) {
             outscope.setData({braceletData: res})
@@ -90,16 +90,17 @@ Page({
         console.log(err)
       }
     })
-
-    if (this.data(braceletData.bl_ID) >= 900) {
+    let braceletID = braceletData.bl_ID
+    if (braceletID >= 900) {
       // handle complementary bracelet indices
       wx.cloud.callFunction({
-        name: "callSQL",
-        data: ""
+        name: "deductFromComplementary",
+        data: {
+          braceletID: braceletID,
+          amount: 
+        }
       })
-      // set to activate
-      // add complementary money to booths
-
+      this.data.braceletData = {}
     } else {
       // normal handle
     }
