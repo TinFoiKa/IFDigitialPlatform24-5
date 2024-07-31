@@ -97,7 +97,7 @@ Page({
         name: "deductFromComplementary",
         data: {
           braceletID: braceletID,
-          amount: 
+          amount: amount
         }
       })
       this.data.braceletData = {}
