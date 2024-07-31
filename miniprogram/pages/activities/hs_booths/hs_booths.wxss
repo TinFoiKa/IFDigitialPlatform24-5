@@ -1,4 +1,6 @@
-page{}
+page{
+  /* no*/
+}
 /* pages/hotel/index.wxss */
 .container {
   position: absolute;
